@@ -1,0 +1,452 @@
+/* CSS untuk ukuran layar maksimal 768px */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: none; /* Menghilangkan background image */
+    }
+
+    .container {
+        width: 90%; /* Mengubah lebar container menjadi 90% dari lebar layar */
+        height: auto; /* Mengubah tinggi container menjadi otomatis */
+        padding: 20px; /* Mengurangi padding pada container untuk tampilan lebih kecil */
+    }
+
+    .form {
+        flex-direction: column; /* Mengubah tata letak form menjadi vertikal */
+    }
+
+    .container.active .form.login {
+        transform: none; /* Menghilangkan animasi transform pada form login */
+    }
+
+    .container .form.sign-up {
+        position: static; /* Mengubah posisi form sign-up menjadi statis */
+        transform: none; /* Menghilangkan animasi transform pada form sign-up */
+    }
+
+    .remember,
+    .sign-link {
+        text-align: center; /* Mengubah tata letak remember dan sign-link menjadi tengah */
+    }
+
+    .sign-link p {
+        margin-bottom: 20px; /* Memberi ruang bawah pada elemen paragraf dalam sign-link */
+    }
+}
+
+/* CSS untuk ukuran layar maksimal 768px */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: none; /* Menghilangkan background image */
+        padding: 50px;
+    }
+
+    .container {
+        width: 90%; /* Mengubah lebar container menjadi 90% dari lebar layar */
+        height: auto; /* Mengubah tinggi container menjadi otomatis */
+        padding: 30px; /* Mengurangi padding pada container untuk tampilan lebih kecil */
+    }
+
+    .form {
+        flex-direction: column; /* Mengubah tata letak form menjadi vertikal */
+    }
+
+    .container.active .form.login {
+        transform: none; /* Menghilangkan animasi transform pada form login */
+    }
+
+    .container .form.sign-up {
+        position: static; /* Mengubah posisi form sign-up menjadi statis */
+        transform: none; /* Menghilangkan animasi transform pada form sign-up */
+    }
+    .container.active .form.sign-up {
+        transform: none;
+    }
+    .remember,
+    .sign-link {
+        text-align: center; /* Mengubah tata letak remember dan sign-link menjadi tengah */
+    }
+
+    .sign-link p {
+        margin-bottom: 20px; /* Memberi ruang bawah pada elemen paragraf dalam sign-link */
+    }
+}
+/* CSS untuk ukuran layar 425px */
+@media screen and (max-width: 425px) {
+    body {
+        padding: 30px; /* Mengurangi padding pada body untuk tampilan lebih kecil */
+    }
+
+    .container {
+        padding: 20px; /* Mengurangi padding pada container untuk tampilan lebih kecil */
+    }
+
+    h2 {
+        font-size: 24px; /* Mengurangi ukuran font h2 untuk tampilan lebih kecil */
+    }
+
+    .input input {
+        width: 100%; /* Mengubah lebar input menjadi 100% dari container */
+    }
+
+    .sign-link p {
+        font-size: 14px; /* Mengurangi ukuran font pada paragraf dalam sign-link */
+    }
+}
+
+
+
+
+/* @media screen and (min-width: 2560px){
+.container{
+    position: relative;
+    width: 900px;
+    height: 1020px;
+    background: #8484e4af;
+    border-radius: 15px;
+    padding: 40px;
+}
+h2{
+    font-size: 80px;
+    color: lemonchiffon;
+    text-align: center;
+    
+}
+.input input:focus~label,
+.input input:valid~label{
+    top: -40px;
+}
+.input{
+    position: relative;
+    margin: 30px 0;
+    
+}
+.input label{
+    top: 20%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+.input input{
+    width: 800px;
+    height: 100px;
+    font-size: 50px;
+    padding: 80px 10px;
+}
+.remember label{
+    font-size: 50px;
+}
+button{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 40px;
+}
+.sign-link{
+    font-size: 50px;
+    text-align: center;
+    margin: 15px 0;
+}
+} */
+
+/* responsif masih aman2 lah ini tapi kacau di sign up */
+
+/* @media screen and (min-width: 768px) {
+    .container {
+        width: 300px;
+        height: 400px;
+    }
+
+    .form {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .input {
+        margin: 30px 0;
+    }
+
+    .input label {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 17px;
+    }
+
+    .input input {
+        width: 250px;
+        height: 50px;
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .remember {
+        margin: -5px 0 15px 5px;
+
+    }
+
+    .remember label {
+        font-size: 17px;
+    }
+
+    button {
+
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .container {
+        width: 300px;
+        height: 400px;
+
+    }
+
+    h2 {
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form {
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .input {
+        margin: 30px 0;
+    }
+
+    .input label {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 17px;
+    }
+
+    .input input {
+        width: 250px;
+        height: 50px;
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    button {
+
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        width: 300px;
+        height: 400px;
+
+    }
+
+    h2 {
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form {
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .input {
+        margin: 30px 0;
+    }
+
+    .input label {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 17px;
+    }
+
+    .input input {
+        width: 250px;
+        height: 50px;
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    button {
+
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .container {
+        width: 300px;
+        height: 400px;
+
+    }
+
+    h2 {
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form {
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .input {
+        margin: 30px 0;
+    }
+
+    .input label {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 17px;
+    }
+
+    .input input {
+        width: 250px;
+        height: 50px;
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    button {
+
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+    }
+} */
+
+/* sampe sini */
+
+/* @media screen and (min-width: 375px){
+    .container{
+        width: 300px;
+        height: 350px;
+
+
+    }
+    h2{
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+    .form{
+        justify-content: center;
+        text-align: center;
+    
+    }
+    .input{
+        margin: 20px 0;
+    }
+    .input label{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 15px;
+    }
+    .input input{
+        width: 250px;
+        height: 30px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .remember{
+        margin: -5px 0 5px 5px;
+        text-align: center;
+    
+    }
+    .remember label{
+        font-size: 15px;
+    }
+    button{
+    
+        width: 90%;
+        height: 30px;
+        font-size: 13px;
+    }
+} */
+/* @media screen and (min-width: 320px){
+    .container{
+        width: 250px;
+        height: 350px;
+
+
+    }
+    h2{
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+    .form{
+        justify-content: center;
+        text-align: center;
+    
+    }
+    .input{
+        margin: 20px 0;
+    }
+    .input label{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 15px;
+    }
+    .input input{
+        width: 150px;
+        height: 30px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .remember{
+        margin: -5px 0 5px 5px;
+        text-align: center;
+    
+    }
+    .remember label{
+        font-size: 13px;
+    }
+    button{
+    
+        width: 90%;
+        height: 30px;
+        font-size: 13px;
+    }
+    .sign-link{
+        font-size: 12px;
+        text-align: center;
+        margin: 15px 0;
+    }
+} */

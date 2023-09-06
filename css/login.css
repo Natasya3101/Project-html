@@ -1,0 +1,261 @@
+/* Reset dan style default */
+* {
+    /* Menghapus margin default */
+    margin: 0;
+    /*  Menghapus padding default yang diberikan */
+    padding: 0;
+    /* Ukuran semua elemen akan mencakup border dan padding, 
+    sehingga lebar dan tinggi elemen tidak akan berubah ketika menambahkan border atau padding */
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/* Body */
+body {
+
+    /* Mengatur elemen body menjadi flex container */
+    display: flex;
+    /* Mengatur konten secara horizontal berada di tengah-tengah halaman */
+    justify-content: center;
+    /* Mengatur konten secara vertikal berada di tengah-tengah halaman */
+    align-items: center;
+    /* Mengatur tinggi minimal body menjadi 100 viewport height */
+    min-height: 100vh;
+    /* Menetapkan gambar latar belakang "Global.jpg" */
+    background-image: url(/asset/images/Global.jpg);
+}
+
+
+/* Kelas "container" */
+.container {
+    /* Menetapkan posisi elemen menjadi relatif terhadap posisi normalnya di dalam dokumen */
+    position: relative;
+    /* Lebar elemen menjadi 400 piksel */
+    width: 400px;
+    /* Tinggi elemen menjadi 500 piksel */
+    height: 500px;
+    /* Memberikan warna latar belakang dengan nilai rgba(132, 132, 228, 0.69) */
+    background: #8484e4af;
+    /* Mengatur radius lengkung (border-radius) pada elemen menjadi 15 piksel */
+    border-radius: 15px;
+    /* Memberikan ruang padding 40 piksel di dalam elemen */
+    padding: 40px;
+}
+
+
+/* Kelas "form" */
+.form {
+    /* Tata letak menjadi flex (flexbox) */
+    display: flex;
+    /* Mengatur item-item menjadi berada di tengah-tengah secara vertikal */
+    align-items: center;
+    /* Lebar elemen menjadi 100% dari lebar kontainer */
+    width: 100%;
+    /* Tinggi elemen menjadi 100% dari tinggi kontainer  */
+    height: 100%;
+    /* Mengatur efek transisi (transition) saat ada perubahan pada elemen, durasinya adalah 1 detik dengan efek ease-in-out */
+    transition: 1s ease-in-out;
+}
+
+.container.active .form.login {
+    /* Mengubah skala (scale) elemen form menjadi 0,menjadi tidak terlihat */
+    transform: scale(0);
+    /* Menggeser posisi elemen form secara horizontal -300 piksel dan secara vertikal,500 piksel dari posisi normalnya */
+    translate: (-300px, 500px);
+}
+
+
+/* Gaya untuk elemen dengan kelas "form" yang berada di dalam elemen dengan kelas "container" dan memiliki kelas "sign-up" */
+
+/* Posisi elemen form dengan kelas "sign-up" di dalam elemen dengan kelas "container" */
+.container .form.sign-up {
+    /* Mengatur posisi elemen form menjadi posisi absolut (terlepas dari aliran dokumen) */
+    position: absolute;
+    /* Menempatkan elemen form di bagian atas elemen dengan kelas "container" */
+    top: 0;
+    /* Mengubah skala (scale) elemen form menjadi 0, membuatnya menjadi tidak terlihat */
+    transform: scale(0);
+    /* Menggeser posisi elemen form secara horizontal sejauh 200 piksel dan secara vertikal sejauh -500 piksel dari posisi normalnya */
+    translate: (200px, -500px);
+}
+
+
+.container.active .form.sign-up {
+    /* Transformasi form saat elemen container memiliki kelas "active" dan elemen form memiliki kelas "sign-up",
+    mengubah skala (scale) elemen form menjadi 1, mengembalikan ukuran normalnya */
+    transform: scale(1);
+    /* Menggeser posisi elemen form menjadi posisi awal (0, 0) */
+    translate: (0, 0);
+}
+
+
+h2 {
+    /* Mengatur ukuran font menjadi 30 piksel */
+    font-size: 30px;
+    color: lemonchiffon;
+    /* Mengatur teks menjadi berada di tengah-tengah secara horizontal */
+    text-align: center;
+}
+
+
+.input {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid lemonchiffon;
+}
+
+.input label {
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgb(18, 19, 19);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input input:focus~label,
+.input input:valid~label {
+    top: -10px;
+}
+
+.remember {
+    margin: -5px 0 15px 5px;
+
+}
+
+.remember label {
+    color: rgb(18, 19, 19);
+    font-size: 15px;
+}
+
+.remember label input {
+    accent-color: lemonchiffon;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    background: lemonchiffon;
+    color: rgb(130, 125, 80);
+
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+button a {
+    text-decoration: none;
+}
+
+.sign-link {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sign-link p {
+    color: rgb(18, 19, 19);
+
+}
+
+.sign-link p a {
+    color: rgb(18, 19, 19);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Ukuran layar maksimal 768px */
+@media screen and (max-width: 768px) {
+    body {
+        /* Menghilangkan background image */
+        background-image: none;
+        padding: 50px;
+    }
+
+    .container {
+        /* Mengubah lebar container menjadi 90% dari lebar layar */
+        width: 90%;
+        /* Mengubah tinggi container menjadi otomatis */
+        height: auto;
+        /* Mengurangi padding pada container untuk tampilan lebih kecil */
+        padding: 30px;
+    }
+    .hidden{
+        display: none;
+    }
+    .form {
+        /* Mengubah tata letak form menjadi vertikal */
+        flex-direction: column;
+    }
+
+    .container.active .form.login {
+        /* Menghilangkan animasi transform pada form login */
+        transform: none;
+        /* display: none;    */
+    }
+
+    .container .form.sign-up {
+        /* Mengubah posisi form sign-up menjadi statis */
+        position: static;
+        /* Menghilangkan animasi transform pada form sign-up */
+        transform: none;
+        /* display: none; */
+    }
+
+    .container.active .form.sign-up {
+        transform: none;
+    }
+
+    .remember,
+    .sign-link {
+        /* Mengubah tata letak remember dan sign-link menjadi tengah */
+        text-align: center;
+    }
+
+    .sign-link p {
+        /* Memberi ruang bawah pada elemen paragraf dalam sign-link */
+        margin-bottom: 20px;
+    }
+}
+
+/* Ukuran layar 425px */
+@media screen and (max-width: 500px) {
+    body {
+        /* Mengurangi padding pada body untuk tampilan lebih kecil */
+        padding: 30px;
+    }
+
+    .container {
+        /* Mengurangi padding pada container untuk tampilan lebih kecil */
+        padding: 20px;
+    }
+
+    h2 {
+        /* Mengurangi ukuran font h2 untuk tampilan lebih kecil */
+        font-size: 24px;
+    }
+
+    .input input {
+        /* Mengubah lebar input menjadi 100% dari container */
+        width: 100%;
+    }
+
+    .sign-link p {
+        /* Mengurangi ukuran font pada paragraf dalam sign-link */
+        font-size: 14px;
+    }
+}

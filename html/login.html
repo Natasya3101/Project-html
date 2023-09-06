@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form login" id="login">
+            <form action="" id="login-form">
+                <h2>Login</h2>
+                <div class="input">
+                    <input type="text" id="login-user" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input">
+                    <input type="password" id="login-password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit">LOGIN</a></button>
+                <div class="sign-link">
+                    <p>Don't have a account? <a href="#" class="up-button">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form sign-up hidden" id="sign-up">
+            <form action="" id="sign-up-form">
+                <h2>Sign Up</h2>
+                <div class="input">
+                    <input type="text" id="sign-up-user" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input">
+                    <input type="email" id="sign-up-email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input">
+                    <input type="password" id="sign-up-password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> I agree to the terms & conditions</label>
+                </div>
+                <button type="submit">SIGN UP</a></button>
+                <div class="sign-link">
+                    <p>Already have a account? <a href="#" class="in-button">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+        <script src="/js/login.js"></script>
+    </div>
+</body>
+
+</html>
